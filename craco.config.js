@@ -1,3 +1,4 @@
+const ESLintPlugin = require('eslint-webpack-plugin');
 module.exports = {
   style: {
     postcss: {
@@ -7,4 +8,14 @@ module.exports = {
       ],
     },
   },
-}
+
+  webpack: {
+    plugins: [
+      new ESLintPlugin({
+        // Adjust ESLint configuration as needed
+      }),
+    ],
+  },
+};
+
+
